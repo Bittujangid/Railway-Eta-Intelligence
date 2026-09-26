@@ -1,0 +1,68 @@
+[
+  {
+    "dataset_name": "DataMeet Indian Railways (Stations, Trains, Schedules)",
+    "source_url": "https://github.com/datameet/railways",
+    "download_timestamp": "2026-09-22T14:37:48.060782+00:00",
+    "local_file": [
+      "data/raw/datameet/schedules.json",
+      "data/raw/datameet/stations.json",
+      "data/raw/datameet/trains.json"
+    ],
+    "source_type": "PUBLIC_COMMUNITY",
+    "license_if_verified": "Creative Commons Attribution 2.5 India / Open Data",
+    "download_status": "SUCCESS",
+    "row_count": {
+      "stations": 8990,
+      "trains": 5208,
+      "schedules": 417080
+    },
+    "column_count": {
+      "stations": 5,
+      "trains": 21,
+      "schedules": 8
+    },
+    "coverage": "All-India network, stations, trains, and schedule sequences",
+    "notes": "Successfully extracted 3 railway topology files from DataMeet repository. Verified: 8990 stations, 5208 trains, 417080 schedule records."
+  },
+  {
+    "dataset_name": "data.gov.in Indian Railways Train Time Table",
+    "source_url": "https://www.data.gov.in/catalog/indian-railways-train-time-table",
+    "download_timestamp": "2026-09-22T14:37:54.655587+00:00",
+    "local_file": null,
+    "source_type": "OFFICIAL_PUBLIC",
+    "license_if_verified": "Government Open Data License - India (GODL)",
+    "download_status": "CATALOG_ACCESSED",
+    "row_count": 0,
+    "column_count": 0,
+    "coverage": "Official Ministry of Railways Timetables",
+    "notes": "Catalog page reachable. Direct bulk CSV endpoint on data.gov.in requires registered API key and OGPL session."
+  },
+  {
+    "dataset_name": "Indian Railway Delays Dataset (ctolerate)",
+    "source_url": "https://github.com/ctolerate/indian-railway-delays-dataset",
+    "download_timestamp": "2026-09-22T14:37:57.996936+00:00",
+    "local_file": [
+      "data/raw/delay/indian_railway_delays_dataset.csv"
+    ],
+    "source_type": "PUBLIC_COMMUNITY",
+    "license_if_verified": "Public Community Dataset / Open Source",
+    "download_status": "SUCCESS",
+    "row_count": 10,
+    "column_count": 6,
+    "coverage": "Historical train-level arrival delay records",
+    "notes": "Acquired 1 files from public delay repository. Verified schema columns: ['Train_Name', 'Route', 'Scheduled_Arrival', 'Actual_Arrival', 'Delay_Minutes', 'Date']."
+  },
+  {
+    "dataset_name": "Kaggle Indian Railways Passenger Train Delays Dataset",
+    "source_url": "https://www.kaggle.com/datasets/naijilaji/indian-railways-passenger-train-delays-dataset/data",
+    "download_timestamp": "2026-09-22T14:37:57.996968+00:00",
+    "local_file": null,
+    "source_type": "PUBLIC_COMMUNITY",
+    "license_if_verified": "Community (Kaggle)",
+    "download_status": "MANUAL_REQUIRED",
+    "row_count": 0,
+    "column_count": 0,
+    "coverage": "Passenger train historical delays",
+    "notes": "Kaggle datasets require authenticated user API tokens (~/.kaggle/kaggle.json). As per Section 7, skipping mandatory dependency without fabrication."
+  }
+]

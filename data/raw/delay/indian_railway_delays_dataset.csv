@@ -1,0 +1,11 @@
+Train_Name,Route,Scheduled_Arrival,Actual_Arrival,Delay_Minutes,Date
+Rajdhani Express,Delhi–Mumbai,10:00,10:45,45,2024-10-01
+Shatabdi Express,Jaipur–Delhi,07:00,07:05,5,2024-10-02
+Duronto Express,Mumbai–Kolkata,09:30,10:15,45,2024-10-03
+Garib Rath Express,Delhi–Lucknow,11:00,11:40,40,2024-10-04
+Tejas Express,Mumbai–Goa,06:30,06:50,20,2024-10-05
+Humsafar Express,Kolkata–Delhi,13:00,13:20,20,2024-10-06
+Jan Shatabdi Express,Pune–Mumbai,08:45,08:50,5,2024-10-07
+Intercity Express,Chennai–Bangalore,09:15,09:25,10,2024-10-08
+Sampark Kranti Express,Delhi–Chandigarh,17:30,18:10,40,2024-10-09
+Vande Bharat Express,Mumbai–Ahmedabad,06:00,06:10,10,2024-10-10

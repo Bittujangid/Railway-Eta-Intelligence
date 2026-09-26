@@ -1,0 +1,38 @@
+{
+  "algorithm": "XGBRegressor",
+  "features": [
+    "previous_delay_minutes",
+    "speed_kmph",
+    "dwell_time_minutes",
+    "distance_to_next_station_km",
+    "day_of_week",
+    "hour",
+    "section_congestion",
+    "historical_recovery_minutes",
+    "train_interaction_density",
+    "scheduled_travel_time_minutes"
+  ],
+  "target": "target_delay_minutes",
+  "train_rows": 73106,
+  "test_rows": 26584,
+  "train_date_range": "2026-08-01 to 2026-08-22",
+  "test_date_range": "2026-08-23 to 2026-08-30",
+  "mae": 2.67,
+  "rmse": 5.35,
+  "q05_residual": -5.19,
+  "q95_residual": 5.69,
+  "data_source_type": "SYNTHETIC_CALIBRATED",
+  "feature_importances": {
+    "previous_delay_minutes": 0.7718,
+    "day_of_week": 0.078,
+    "dwell_time_minutes": 0.0617,
+    "hour": 0.0448,
+    "scheduled_travel_time_minutes": 0.0225,
+    "distance_to_next_station_km": 0.0127,
+    "historical_recovery_minutes": 0.0048,
+    "section_congestion": 0.003,
+    "train_interaction_density": 0.0006,
+    "speed_kmph": 0.0001
+  },
+  "uncertainty_method": "Empirical residual quantiles (Q05, Q95) on held-out temporal validation set"
+}
