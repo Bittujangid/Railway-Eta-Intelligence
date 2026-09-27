@@ -45,14 +45,14 @@ Journey Feasibility
 Network Impact
 ```
 
-1. **Railway Data**: Ingests route topology, genuine station coordinates, timetable schedules, and operational parameters.
+1. **Railway Data**: Uses public railway topology and timetable data together with calibrated and simulated operational parameters.
 2. **Feature Processing**: Computes speed, scheduled dwell, remaining distance, temporal peak factors, and corridor interaction density without temporal leakage.
 3. **XGBoost Forecasting**: Predicts station-to-station delay delta using gradient-boosted decision trees.
 4. **Kinematic Constraints**: Bounds maximum delay recovery and running capability using physical track limits and sectional run times.
 5. **Physics-Informed ML Fusion**: Fuses the machine learning forecast with kinematic constraints to guarantee dimensional consistency and prevent unrealistic acceleration or delay explosion.
 6. **Delay Trajectory**: Recursively rolls out arrival times station-by-station until the destination.
 7. **Dynamic ETA**: Computes arrival timestamps adjusted for predicted sectional delays.
-8. **Uncertainty**: Calculates empirical confidence intervals derived from held-out validation residuals.
+8. **Uncertainty**: Calculates empirical prediction ranges derived from held-out validation residuals.
 9. **Journey Feasibility**: Evaluates whether a passenger can reach their destination before a required deadline with an adequate safety buffer.
 10. **Network Impact**: Estimates downstream delay propagation risk on interconnected corridor traffic.
 
@@ -63,7 +63,7 @@ Network Impact
 - **Dynamic Station-Wise ETA**: Station-by-station predicted arrival times computed along the entire remaining route.
 - **Future Delay Trajectory**: Sequential multi-stop delay forecast curve showing how delay evolves over distance and time.
 - **Recover / Maintain / Increase Delay Evolution**: Automatic classification of delay trend based on corridor timetable slack and sectional congestion.
-- **Validation-Based ETA Uncertainty**: Empirical quantile intervals ($Q_{05}$ to $Q_{95}$) derived from model residuals on held-out validation data.
+- **Validation-Based ETA Uncertainty**: Empirical prediction intervals (`Q05` to `Q95`) derived from held-out validation residuals.
 - **Journey Feasibility**: Deterministic passenger feasibility score ($0$ to $100$) and status (`FEASIBLE`, `UNCERTAIN`, `LOW_FEASIBILITY`).
 - **Passenger-Required Arrival & Minimum Buffer**: Interactive calculator allowing passengers to set their target arrival time and required buffer margin.
 - **Network Propagation Risk**: Schedule-derived headway and route congestion heuristic flagging downstream operational impact.
@@ -223,6 +223,6 @@ The dashboard provides an interactive scenario switcher in the top navigation ba
 - **No Live Indian Railways Production API Integration**: The system does not connect to internal CRIS/NTES/COA feeds; live train telemetry is simulated.
 - **Simulated Live Train State**: Telemetry messages are generated to demonstrate real-time reactivity without requiring authenticated rail network access.
 - **Synthetic/Calibrated Training Distribution**: Model weights were trained on a calibrated synthetic dataset reflecting railway operational physics rather than multi-year historical logs.
-- **Validation-Based Uncertainty**: Confidence bounds reflect validation residuals ($Q_{05}, Q_{95}$) rather than full Bayesian posterior distributions.
+- **Validation-Based Uncertainty**: Prediction bounds reflect validation residuals ($Q_{05}, Q_{95}$) rather than full Bayesian posterior distributions.
 - **Heuristic Network Propagation**: Downstream propagation estimates track occupancy risk using schedule density heuristics rather than dynamic signaling block simulations.
 - **Prototype / Demo Scope**: Designed as an advanced hackathon prototype to demonstrate feasibility and decision-support value.
