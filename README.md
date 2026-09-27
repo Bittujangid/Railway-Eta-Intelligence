@@ -195,7 +195,7 @@ The test suite validates:
 
 ---
 
-## Production Build
+## Frontend Production Build
 
 To verify and compile the frontend production bundle:
 
