@@ -177,7 +177,7 @@ python -m pytest backend/tests -v
 
 **Expected Result**:
 ```
-======================= 19 passed, 2 warnings in 7.99s =======================
+19 passed, 2 warnings in 7.99s
 ```
 
 The test suite validates:
