@@ -220,9 +220,9 @@ The dashboard provides an interactive scenario switcher in the top navigation ba
 
 ## Limitations
 
-- **No Live Indian Railways Production API Integration**: The system does not connect to internal CRIS/NTES/COA feeds; live train telemetry is simulated.
+- **No Live Indian Railways Production Feed Integration**: The system does not connect to internal CRIS/NTES/COA feeds; live train telemetry is simulated.
 - **Simulated Live Train State**: Telemetry messages are generated to demonstrate real-time reactivity without requiring authenticated rail network access.
 - **Synthetic/Calibrated Training Distribution**: Model weights were trained on a calibrated synthetic dataset reflecting railway operational physics rather than multi-year historical logs.
-- **Validation-Based Uncertainty**: Prediction bounds reflect validation residuals ($Q_{05}, Q_{95}$) rather than full Bayesian posterior distributions.
+- **Validation-Based Uncertainty**: Prediction bounds reflect validation residuals (Q05, Q95) rather than full Bayesian posterior distributions.
 - **Heuristic Network Propagation**: Downstream propagation estimates track occupancy risk using schedule density heuristics rather than dynamic signaling block simulations.
 - **Prototype / Demo Scope**: Designed as an advanced hackathon prototype to demonstrate feasibility and decision-support value.
