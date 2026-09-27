@@ -160,7 +160,6 @@ npm run dev
 ```
 
 ### Expected URLs
-- **Backend API**: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 - **Backend Health Check**: [http://127.0.0.1:8000/health](http://127.0.0.1:8000/health)
 - **Interactive API Docs (Swagger)**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 - **Frontend Dashboard**: [http://localhost:5173](http://localhost:5173)
